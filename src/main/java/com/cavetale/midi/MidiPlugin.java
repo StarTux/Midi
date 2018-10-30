@@ -157,6 +157,7 @@ public final class MidiPlugin extends JavaPlugin implements Runnable, Listener {
                 ioe.printStackTrace();
                 sender.sendMessage("Error creating MIDI Player file. See cosole.");
             }
+            return true;
         }
         default: return false;
         }

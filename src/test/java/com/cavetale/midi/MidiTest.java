@@ -32,8 +32,9 @@ public final class MidiTest {
         // for (int i = 0; i < instruments.length; i += 1) System.out.println("Instr #" + i + " = " + instruments[i]);
 
         final String[] NOTE_NAMES = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
-        Sequence sequence = MidiSystem.getSequence(new File("test.mid"));
-
+        File file = new File("test.mid");
+        if (!file.exists()) return;
+        Sequence sequence = MidiSystem.getSequence(file);
         int trackNumber = 0;
         for (Track track: sequence.getTracks()) {
             trackNumber++;
