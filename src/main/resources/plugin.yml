@@ -1,0 +1,23 @@
+main: com.cavetale.midi.MidiPlugin
+name: Midi
+version: 0.1
+api-version: 1.13
+description: MIDI Player
+author: StarTux
+website: https://cavetale.com
+depend: []
+softdepend: []
+commands:
+  midi:
+    description: Midi Command
+    permission: midi.midi
+    usage: |-
+      /midi play <name> <speed> <volume>
+      /midi stop <name>
+      /midi list
+      /midi reload
+      /midi create <name>
+permissions:
+  midi.midi:
+    description: Use /midi
+    default: op
